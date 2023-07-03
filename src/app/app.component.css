@@ -1,0 +1,67 @@
+.titulouno {
+    color: black;
+    text-decoration: underline;
+}
+
+.botonuno {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botonuno:hover {
+    background-color: #45a049;
+}
+
+.botonuno:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #45a049;
+}
+
+p{
+    font-size: 36px;
+    color: #333;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+}
+
+.listado{
+        list-style: none;
+        padding: 0;
+        }
+
+    .alumnos {
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: #f5f5f5;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
+        } 
+
+    .alumnos {
+        background-color: #e0e0e0;
+    }
+
+    .diseñoInput{
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: #f5f5f5;
+        color: #333;
+        font-size: 16px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+    }
+
+    .diseñoInput:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px #4CAF50;
+    }

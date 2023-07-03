@@ -1,0 +1,21 @@
+<h1 class="titulouno">Listado de Alumnos</h1>
+
+
+<ul class="listado">
+  <li class="alumnos"  *ngFor=" let alumno of  ['Lautaro', 'Agustin', 'Juan', 'Antonella', 'Javier', 'Julian', 'Laura', 'Lucia', 'Felipe']">
+    {{ alumno }}
+  </li>
+</ul>
+
+<p class="p" *ngIf="faltanAlumnos; else todosPresentes ">Faltaron Alumnos</p>
+<ng-template #todosPresentes>
+  <p>Vinieron todos</p>
+</ng-template>
+
+<button (click)="faltanAlumnos = !faltanAlumnos" type="button" class="botonuno">Confirmacion de asistencia de la Clase</button>
+
+<input class="diseñoInput"  (keyup)="onInputChange($event)" type="text" >
+
+
+
+<p>{{ fecha | date:'hh:mm a' }}</p>
