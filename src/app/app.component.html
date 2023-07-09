@@ -2,7 +2,7 @@
 
 
 <ul class="listado">
-  <li class="alumnos"  *ngFor=" let alumno of  ['Lautaro', 'Agustin', 'Juan', 'Antonella', 'Javier', 'Julian', 'Laura', 'Lucia', 'Felipe']">
+  <li class="alumnos"  *ngFor=" let alumno of users">
     {{ alumno }}
   </li>
 </ul>
@@ -19,3 +19,5 @@
 
 
 <p>{{ fecha | date:'hh:mm a' }}</p>
+
+<app-user-info></app-user-info>

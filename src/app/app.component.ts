@@ -11,6 +11,8 @@ export class AppComponent {
   faltanAlumnos=true; 
   fecha: Date = new Date();
 
+  users: string []= ['Lautaro', 'Agustin', 'Juan', 'Antonella', 'Javier', 'Julian', 'Laura', 'Lucia', 'Felipe']
+
 
   onInputChange(event: KeyboardEvent): void{
     const htmlImput = event.target as HTMLInputElement;
