@@ -1,0 +1,38 @@
+
+<div class="conteiner">
+    <h2 class="tittle" >Alumnos</h2>
+    <form [formGroup]="alumnoForm" (ngSubmit)="onSubmit()" class="form">
+        <mat-form-field>
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName="nombre" required>
+        </mat-form-field>
+
+        <mat-form-field>
+        <mat-label>Edad</mat-label>
+        <input matInput type="number" formControlName="edad" required>
+        </mat-form-field>
+
+        <mat-form-field>
+        <mat-label>Correo Electrónico</mat-label>
+        <input matInput type="email" formControlName="email" required>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit">Agregar Alumno</button>
+    </form>
+
+    <div *ngIf="alumnos.length > 0">
+        <h2 class="lista">Lista de Alumnos</h2>
+        <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Correo Electrónico</th>
+        </tr>
+        <tr *ngFor="let a of alumnos">
+            <td>{{ a.nombre }}</td>
+            <td>{{ a.edad }}</td>
+            <td>{{ a.email }}</td>
+        </tr>
+        </table>
+    </div>
+    </div>

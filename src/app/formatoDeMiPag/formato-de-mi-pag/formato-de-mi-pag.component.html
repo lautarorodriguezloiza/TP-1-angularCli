@@ -1,0 +1,25 @@
+<mat-drawer-container class="example-container" autosize>
+    
+    <mat-drawer mode="over" #drawer class="example-sidenav" mode="side">
+    <ul>
+        <li>
+        <a class="titulo" href="">Listado de Alumnos</a>
+        </li>
+    </ul>
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+    
+    <mat-toolbar color="primary">
+        <button (click)="drawer.toggle()" mat-icon-button class="example-icon"
+        aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+        </button>
+        <span>Alumnos</span>
+    </mat-toolbar>
+
+<main>
+    <app-home></app-home>
+</main>
+    </div>
+</mat-drawer-container>
