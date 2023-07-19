@@ -48,3 +48,8 @@ font-weight: bold;
     border-bottom: 1px solid #ccc;
     padding-bottom: 0.5rem;
     }
+
+    .boton{
+        display: flex;
+        justify-content: center;
+    }

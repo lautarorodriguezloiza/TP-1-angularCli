@@ -4,6 +4,7 @@ import {  FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 interface Alumno {
   nombre: string;
+  apellido:string
   edad: number;
   email: string;
   asistencia: boolean;
@@ -23,6 +24,7 @@ export class HomeComponent {
   constructor(private formBuilder: FormBuilder) {
     this.alumnoForm = this.formBuilder.group({
       nombre: ['', Validators.required],
+      apellido: [''],
       edad: [null, Validators.required],
       email: ['', [Validators.required, Validators.email]]
     });

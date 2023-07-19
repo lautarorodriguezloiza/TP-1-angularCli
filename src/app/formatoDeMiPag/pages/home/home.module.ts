@@ -6,14 +6,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { SharedModule } from 'src/app/shared/shared.module';
 import {  FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { FormatoApellidoPipe } from './pipes/apellidos'
 
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    
+    FormatoApellidoPipe,
   ],
   imports: [
     CommonModule,
