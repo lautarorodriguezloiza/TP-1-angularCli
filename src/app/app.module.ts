@@ -15,11 +15,13 @@ import { HomeModule } from './formatoDeMiPag/pages/home/home.module';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     UserInfoComponent,
-    FormatoDeMiPagComponent
+    FormatoDeMiPagComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,7 @@ import { HomeModule } from './formatoDeMiPag/pages/home/home.module';
     MatButtonModule,
     HomeModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
