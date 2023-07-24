@@ -18,9 +18,10 @@ interface Alumno {
   
 })
 export class HomeComponent implements OnInit, OnDestroy {
+  formularioEnviado = false;
   alumnoForm: FormGroup = this.formBuilder.group({
     nombre: ['', Validators.required],
-    apellido: [''],
+    apellido: ['',Validators.required],
     edad: [null, Validators.required],
     email: ['', [Validators.required, Validators.email]]
   });
@@ -43,21 +44,19 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.alumnosSubscription.unsubscribe();
     }
   }
-  borrarFormulario() {
-    this.alumnoForm.reset();
-  }
 
   onSubmit() {
-
-    const newAlumno: Alumno = {
-      nombre: this.alumnoForm.value.nombre,
-      apellido: this.alumnoForm.value.apellido,
-      edad: this.alumnoForm.value.edad,
-      email: this.alumnoForm.value.email
-    };
-    this.alumnosService.agregarAlumno(newAlumno);
-
+    if (this.alumnoForm.invalid) {
+      return;
+    }
+    const nuevoAlumno: Alumno = this.alumnoForm.value;
+    this.alumnosService.agregarAlumno(nuevoAlumno);
+    this.formularioEnviado = true;
     this.alumnoForm.reset();
+  }
+  borrarFormulario() {
+    this.alumnoForm.reset();
+    this.formularioEnviado = false; 
   }
 }
 

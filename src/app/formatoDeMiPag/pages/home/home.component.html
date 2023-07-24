@@ -1,7 +1,7 @@
 
 <div class="container">
     <h2 class="title">Alumnos</h2>
-    <form [formGroup]="alumnoForm" (ngSubmit)="onSubmit()" class="form">
+    <form [formGroup]="alumnoForm" (ngSubmit)="onSubmit()" class="form" novalidate>
         <mat-form-field>
         <mat-label>Nombre</mat-label>
         <input matInput formControlName="nombre" required>
@@ -26,20 +26,20 @@
     
     <div *ngIf="alumnos$ | async as alumnos">
         <h2 class="lista">Lista de Alumnos</h2>
-        <table>
+        <table class="tabla">
         <tr>
             <th>Nombre</th>
             <th>Apellido</th>
             <th>Edad</th>
             <th>Correo Electrónico</th>
         </tr>
-        <tr *ngFor="let a of alumnos">
+        <tr  *ngFor="let a of alumnos">
             <td>{{ a.nombre }}</td>
             <td>{{ a.apellido }}</td>
             <td>{{ a.edad }}</td>
             <td>{{ a.email }}</td>
         </tr>
         </table>
-        <button mat-raised-button color="warn" type="button" (click)="borrarFormulario()">Borrar Formulario</button>
+        <button class="boton-borrar" mat-raised-button color="warn" type="button" (click)="borrarFormulario()">Borrar Formulario</button>
     </div>
     </div>
