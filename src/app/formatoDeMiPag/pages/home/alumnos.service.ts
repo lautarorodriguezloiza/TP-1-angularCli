@@ -15,18 +15,21 @@ export interface Alumno {
   providedIn: 'root'
 })
 export class AlumnosService {
+  private alumnosSubject: BehaviorSubject<Alumno[]> = new BehaviorSubject<Alumno[]>([]);
   private alumnos: Alumno[] = [];
 
   constructor() {}
 
   getAlumnos(): Observable<Alumno[]> {
-    return new BehaviorSubject<Alumno[]>(this.alumnos);
+    return this.alumnosSubject.asObservable();
   }
 
-  agregarAlumno(alumno: Alumno) {
+  agregarAlumno(alumno: Alumno): void {
     this.alumnos.push(alumno);
+    this.alumnosSubject.next(this.alumnos.slice());
   }
+
+
 }
-  
 
 
