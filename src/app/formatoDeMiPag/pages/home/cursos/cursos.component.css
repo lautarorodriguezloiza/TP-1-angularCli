@@ -1,0 +1,39 @@
+
+.listado-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    }
+.mat-list-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+.mat-list-item:hover {
+    background-color: gray
+}
+
+.mat-list-item-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mat-list-text {
+    margin-top: 10px;
+}
+
+.button.mat-icon-button {
+margin-left: auto;
+}
+
+.button.mat-icon-button mat-icon {
+    font-size: 24px;
+}
+
+.div.detalle {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: gray;
+    border-radius: 4px;
+}

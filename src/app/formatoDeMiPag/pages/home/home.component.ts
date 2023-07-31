@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   formularioEnviado = false;
   alumnoForm: FormGroup = this.formBuilder.group({
     nombre: ['', Validators.required],
-    apellido: ['',Validators.required],
+    apellido: ['', Validators.required],
     edad: [null, Validators.required],
     email: ['', [Validators.required, Validators.email]]
   });
@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.alumnos$ = this.alumnosService.getAlumnos();
     this.alumnosSubscription = this.alumnos$.subscribe();
   }
-  
+
   ngOnDestroy() {
     if (this.alumnosSubscription) {
       this.alumnosSubscription.unsubscribe();
@@ -54,12 +54,16 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.formularioEnviado = true;
     this.alumnoForm.reset();
   }
+
   borrarFormulario() {
     this.alumnoForm.reset();
-    this.formularioEnviado = false; 
+    this.formularioEnviado = false;
+  }
+
+  eliminarAlumno(alumno: Alumno): void {
+    this.alumnosService.eliminarAlumno(alumno);
   }
 }
-
 
 
 

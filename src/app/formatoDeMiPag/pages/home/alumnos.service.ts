@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, of , BehaviorSubject} from 'rxjs';
+import { Observable,  BehaviorSubject} from 'rxjs';
 
 
 
@@ -29,7 +29,14 @@ export class AlumnosService {
     this.alumnosSubject.next(this.alumnos.slice());
   }
 
-
+  eliminarAlumno(alumno: Alumno): void {
+    const indice = this.alumnos.indexOf(alumno);
+    if (indice !== -1) {
+      this.alumnos.splice(indice, 1);
+      this.alumnosSubject.next(this.alumnos);
+    }
+  }
 }
+
 
 

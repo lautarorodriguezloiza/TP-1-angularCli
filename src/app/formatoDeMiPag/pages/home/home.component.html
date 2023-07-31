@@ -38,8 +38,9 @@
             <td>{{ a.apellido }}</td>
             <td>{{ a.edad }}</td>
             <td>{{ a.email }}</td>
+            <td><button mat-icon-button color="warn" (click)="eliminarAlumno(a)"><mat-icon>delete</mat-icon></button></td>
+            
         </tr>
         </table>
-        <button class="boton-borrar" mat-raised-button color="warn" type="button" (click)="borrarFormulario()">Borrar Formulario</button>
     </div>
     </div>

@@ -4,6 +4,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { HomeModule } from '../pages/home/home.module';
 import { MatIconModule } from '@angular/material/icon';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -16,7 +17,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatToolbarModule,
     HomeModule,
     MatIconModule,
-    
+    RouterModule,
   ]
 })
 export class FormatoDeMiPagModule { }
