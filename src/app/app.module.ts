@@ -12,6 +12,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { HomeModule } from './formatoDeMiPag/pages/home/home.module';
 import { CursosModule } from './formatoDeMiPag/pages/home/cursos/cursos.module';
+import { LoginModule } from './formatoDeMiPag/auth/login.module';
+import { CoreModule } from './core/core.module';
 
 
 @NgModule({
@@ -19,6 +21,7 @@ import { CursosModule } from './formatoDeMiPag/pages/home/cursos/cursos.module';
     AppComponent,
     UserInfoComponent,
     FormatoDeMiPagComponent,
+  
   ],
   imports: [
     BrowserModule,
@@ -32,6 +35,8 @@ import { CursosModule } from './formatoDeMiPag/pages/home/cursos/cursos.module';
     MatButtonModule,
     HomeModule,
     CursosModule,
+    LoginModule,
+    CoreModule
   ],
   
   bootstrap: [AppComponent],

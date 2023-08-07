@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
 
 })
 
-
 export class FormatoDeMiPagComponent {
   showFiller = false;
   showPage = true;

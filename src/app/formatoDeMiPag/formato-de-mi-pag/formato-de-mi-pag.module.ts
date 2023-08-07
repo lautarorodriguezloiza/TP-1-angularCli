@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatToolbarModule } from '@angular/material/toolbar';
+// import { MatSidenavModule } from '@angular/material/sidenav';
+// import { MatToolbarModule } from '@angular/material/toolbar';
 import { HomeModule } from '../pages/home/home.module';
-import { MatIconModule } from '@angular/material/icon';
+// import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 
 
@@ -13,10 +13,10 @@ import { RouterModule } from '@angular/router';
   declarations: [],
   imports: [
     CommonModule,
-    MatSidenavModule,
-    MatToolbarModule,
+    // MatSidenavModule,
+    // MatToolbarModule,
     HomeModule,
-    MatIconModule,
+    // MatIconModule,
     RouterModule,
   ]
 })
