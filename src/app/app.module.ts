@@ -14,6 +14,7 @@ import { HomeModule } from './formatoDeMiPag/pages/home/home.module';
 import { CursosModule } from './formatoDeMiPag/pages/home/cursos/cursos.module';
 import { LoginModule } from './formatoDeMiPag/auth/login.module';
 import { CoreModule } from './core/core.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { CoreModule } from './core/core.module';
     HomeModule,
     CursosModule,
     LoginModule,
-    CoreModule
+    CoreModule,
+    HttpClientModule
   ],
   
   bootstrap: [AppComponent],

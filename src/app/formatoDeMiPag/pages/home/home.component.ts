@@ -8,8 +8,8 @@ interface Alumno {
   apellido:string
   edad: number;
   email: string;
+  
 }
-
 
 @Component({
   selector: 'app-home',
