@@ -23,7 +23,7 @@ import { AlumnosService } from './alumnos.service';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
   ],
   exports:[
     HomeComponent,
