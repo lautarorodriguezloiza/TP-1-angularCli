@@ -8,8 +8,13 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import {  FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormatoApellidoPipe } from './pipes/apellidos'
 import { AlumnosService } from './alumnos.service';
+import { authGuard } from 'src/app/core/guards/auth.guard';
+import { Routes } from '@angular/router';
 
+const routes: Routes = [
+  { path: 'home', component: HomeComponent, canActivate: [authGuard] }
 
+];
 
 @NgModule({
   declarations: [

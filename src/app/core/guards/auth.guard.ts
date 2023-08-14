@@ -1,32 +1,14 @@
 import { CanActivateFn } from '@angular/router';
-import Swal from 'sweetalert2';
+
 
 export const authGuard: CanActivateFn = (route, state) => {
-  const isAuthenticated = performBasicAuthentication(); 
+  const isAuthenticated = true; 
 
   if (isAuthenticated) {
-    Swal.fire({
-      title: 'Inicio de Sesión Exitoso',
-      text: '¡Bienvenido!',
-      icon: 'success'
-    });
+    console.log('Inicio de Sesión Exitoso');
     return true;
   } else {
-    Swal.fire({
-      title: 'Inicio de Sesión Fallido',
-      text: 'Credenciales incorrectas.',
-      icon: 'error'
-    });
-    return true;
+    console.log('Inicio de Sesión Fallido');
+    return false;
   }
 };
-
-function performBasicAuthentication(): boolean {
-  const username = 'usuario';
-  const password = 'contraseña';
-
-  const enteredUsername = prompt('Ingrese su nombre de usuario:');
-  const enteredPassword = prompt('Ingrese su contraseña:');
-
-  return enteredUsername === username && enteredPassword === password;
-}

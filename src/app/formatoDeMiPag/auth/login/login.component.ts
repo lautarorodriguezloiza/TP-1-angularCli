@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import Swal from 'sweetalert2';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
   template: `
- <div class="container">
+  <div class="container">
   <div class="row justify-content-center mt-5">
     <div class="col-md-6">
       <div class="card">
@@ -40,10 +40,10 @@ export class LoginComponent {
   username: string = '';
   password: string = '';
 
-  constructor(private http: HttpClient) {}
+  constructor(private authService: AuthService) {}
 
   onLogin(): void {
-    this.http.post('http://localhost:3000/login', { username: this.username, password: this.password }).subscribe(
+    this.authService.login(this.username, this.password).subscribe(
       (response: any) => {
         console.log('Inicio de sesión exitoso.', response);
         Swal.fire({

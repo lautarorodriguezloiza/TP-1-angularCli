@@ -11,6 +11,7 @@ interface Alumno {
   
 }
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
