@@ -35,7 +35,6 @@ describe('HomeComponent', () => {
     const emailInput = screen.getByLabelText('Email');
     const submitButton = screen.getByText('Login');
 
-    // Llenar el formulario
     fireEvent.input(nombreInput, { target: { value: 'Test' } });
     fireEvent.input(apellidoInput, { target: { value: 'User' } });
     fireEvent.input(edadInput, { target: { value: '30' } });

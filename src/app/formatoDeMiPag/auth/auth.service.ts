@@ -10,9 +10,9 @@ export class AuthService {
 
     constructor(private http: HttpClient) {}
 
-  // Ejemplo de cómo hacer una petición POST usando HTTPS
+ 
     login(username: string, password: string): Observable<any> {
-    const url = `${this.baseUrl}/login`; // Endpoint HTTPS
+    const url = `${this.baseUrl}/login`; 
     const body = { username, password };
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 

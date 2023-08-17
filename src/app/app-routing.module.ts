@@ -21,6 +21,8 @@ const routes: Routes = [
     component: LoginComponent,
     canActivate: [authGuard],
   },
+  
+  { path: '**', redirectTo: 'not-found' }
 ];
 
 @NgModule({
