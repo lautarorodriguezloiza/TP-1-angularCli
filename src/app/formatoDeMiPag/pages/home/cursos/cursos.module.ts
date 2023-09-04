@@ -6,7 +6,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
 import { CursosComponent } from './cursos.component';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   imports: [
@@ -17,6 +19,9 @@ import { CursosComponent } from './cursos.component';
     MatIconModule,
     MatToolbarModule,
     MatListModule,
+    MatCardModule,
+    
+
   ],
   declarations: [CursosComponent],
   exports: [CursosComponent],

@@ -58,11 +58,9 @@ describe('CursosComponent', () => {
     expect(component.cursos.length).toBe(3); 
   });
 
-  it('cursoSeleccionado', () => {
+  it('verDetalles', () => {
     const curso = mockCursosData[0];
     component.verDetalles(curso);
     expect(component.cursoSeleccionado).toBe(curso);
   });
-
-
 });

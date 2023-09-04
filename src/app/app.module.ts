@@ -15,6 +15,8 @@ import { CursosModule } from './formatoDeMiPag/pages/home/cursos/cursos.module';
 import { LoginModule } from './formatoDeMiPag/auth/login.module';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
 
 
 @NgModule({
@@ -38,7 +40,9 @@ import { HttpClientModule } from '@angular/common/http';
     CursosModule,
     LoginModule,
     CoreModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot({}, {}),
+    EffectsModule.forRoot([])
   ],
   
   bootstrap: [AppComponent],

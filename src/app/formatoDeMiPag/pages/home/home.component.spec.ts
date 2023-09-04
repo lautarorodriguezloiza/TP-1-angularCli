@@ -1,9 +1,9 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { HomeComponent } from './home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AlumnosService } from './alumnos.service';
 import { Observable, of } from 'rxjs';
-import { render, screen, fireEvent } from '@testing-library/angular';
+import {screen, fireEvent } from '@testing-library/angular';
 
 describe('HomeComponent', () => {
   const mockAlumnosData = [
@@ -28,12 +28,11 @@ describe('HomeComponent', () => {
     const component = fixture.componentInstance;
     fixture.detectChanges();
 
-  
     const nombreInput = screen.getByLabelText('Nombre');
     const apellidoInput = screen.getByLabelText('Apellido');
     const edadInput = screen.getByLabelText('Edad');
-    const emailInput = screen.getByLabelText('Email');
-    const submitButton = screen.getByText('Login');
+    const emailInput = screen.getByLabelText('Correo Electrónico'); 
+    const submitButton = screen.getByText('Agregar Alumno'); 
 
     fireEvent.input(nombreInput, { target: { value: 'Test' } });
     fireEvent.input(apellidoInput, { target: { value: 'User' } });
@@ -50,6 +49,4 @@ describe('HomeComponent', () => {
       email: 'test@example.com'
     });
   });
-
-
 });
