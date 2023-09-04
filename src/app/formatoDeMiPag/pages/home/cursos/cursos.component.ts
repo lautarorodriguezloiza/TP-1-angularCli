@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { seleccionarCurso } from './cursos.actions';
 import { Curso } from './curso.model';
-import { selectAllCursos, selectCursoSeleccionado } from './curso.selector';
+
 
 @Component({
   selector: 'app-cursos',
@@ -61,13 +61,7 @@ export class CursosComponent {
   cursoSeleccionado: Curso | null = null; 
 
   
-  constructor(private store: Store) {  this.store.select(selectAllCursos).subscribe((cursos) => {
-    this.cursos = cursos;
-  });
-
-  this.store.select(selectCursoSeleccionado).subscribe((cursoSeleccionado) => {
-    this.cursoSeleccionado = cursoSeleccionado;
-  });}
+  constructor(private store: Store) {}
 
   verDetalles(curso: any) {
     this.cursoSeleccionado = curso;
